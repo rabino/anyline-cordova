@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+  Anyline Cordova Plugin
+  indext.html
+
+  Copyright (c) 2016 9yards GmbH
+-->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+        width=device-width, height=device-height">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/anyline.css">
+    <title>Anyline Cordova Example</title>
+
+</head>
+
+<body>
+    <h1>Anyline Cordova</h1>
+
+    <div id="navigation">
+        <details open id="details_scan_modes">
+            <summary class="summary1">
+                Scan Modes
+            </summary>
+            <p>
+                <details open class="details2">
+                    <summary class="summary2">
+                        Energy
+                    </summary>
+                    <p>
+                        <input type="button" value="Electric Meter" onclick="anyline.energy.scan('ELECTRIC_METER')" />
+                        <br/>
+                        <input type="button" value="Gas Meter" onclick="anyline.energy.scan('GAS_METER')" />
+                        <br/>
+                        <details class="details3">
+                            <summary class="summary3">
+                                Other (Alpha)
+                            </summary>
+                            <p>
+                                <input type="button" value="Water Meter White" onclick="anyline.energy.scan('WATER_METER_WHITE')" />
+                                <br/>
+                                <input type="button" value="Water Meter Black" onclick="anyline.energy.scan('WATER_METER_BLACK')" />
+                                <br/>
+                                <input type="button" value="Electric Meter 5_1" onclick="anyline.energy.scan('ELECTRIC_METER_5_1')" />
+                                <br/>
+                                <input type="button" value="Electric Meter 6_1" onclick="anyline.energy.scan('ELECTRIC_METER_6_1')" />
+                                <br/>
+                                <input type="button" value="Heat Meter 4" onclick="anyline.energy.scan('HEAT_METER_4')" />
+                                <br/>
+                                <input type="button" value="Heat Meter 5" onclick="anyline.energy.scan('HEAT_METER_5')" />
+                                <br/>
+                                <input type="button" value="Heat Meter 6" onclick="anyline.energy.scan('HEAT_METER_6')" />
+                                <br/>
+                                <input type="button" value="Digital Meter" onclick="anyline.energy.scan('DIGITAL_METER')" />
+                                <br/>
+                                <input type="button" value="Serial Number" onclick="anyline.energy.scan('SERIAL_NUMBER')" />
+                                <br/>
+                            </p>
+                        </details>
+                        <hr>
+                    </p>
+                </details>
+                <input type="button" value="Barcode" onclick="anyline.barcode.scan()" />
+                <br/>
+                <input type="button" value="MRZ of Passport or ID" onclick="anyline.mrz.scan()" />
+                <br/>
+                <details open class="details2">
+                    <summary class="summary2">
+                        Anyline OCR
+                    </summary>
+                    <p>
+                        <input type="button" value="IBAN" onclick="anyline.ocr.scanIban()" />
+                        <br/>
+                        <input type="button" value="Anyline Voucher Codes" onclick="anyline.ocr.scanAnylineVoucherCodes()" />
+                    </p>
+                </details>
+        </details>
+        </p>
+        </details>
+        <details open id="details_results">
+            <summary class="summary1">
+                Results
+            </summary>
+            <p>
+                <div id="results">
+                </div>
+            </p>
+        </details>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/anyline.barcode.js"></script>
+    <script type="text/javascript" src="js/anyline.energy.js"></script>
+    <script type="text/javascript" src="js/anyline.mrz.js"></script>
+    <script type="text/javascript" src="js/anyline.ocr.js"></script>
+</body>
+
+</html>

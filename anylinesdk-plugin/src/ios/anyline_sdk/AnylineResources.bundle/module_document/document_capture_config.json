@@ -1,0 +1,30 @@
+{
+    "captureResolution":"1080",
+    "pictureResolution":"photo",
+    "cutout": {
+        "style": "rect",
+        "maxWidthPercent": "100%",
+        "maxHeightPercent": "100%",
+        "width": 1080,
+        "ratioFromSize": {
+            "width": 10,
+            "height": 15
+        },
+        "alignment": "center",
+        "strokeWidth": 2,
+        "cornerRadius": 0,
+        "strokeColor": "00000000"
+    },
+    "flash": {
+        "mode": "manual",
+        "alignment": "bottom_left",
+        "offset": {
+            "x": 10,
+            "y": 0
+        }
+    },
+    "beepOnResult": true,
+    "vibrateOnResult": true,
+    "blinkAnimationOnResult": true,
+    "cancelOnResult": true
+}
